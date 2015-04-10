@@ -24,6 +24,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<!-- Notices -->
 	<?php tribe_events_the_notices() ?>
 
+    <!--Testing Git Hub Repo --!>
+
 	<!-- List Header -->
 	<?php do_action( 'tribe_events_before_header' ); ?>
 	<div id="tribe-events-header" <?php tribe_events_the_header_attributes() ?>>

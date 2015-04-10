@@ -1,0 +1,85 @@
+/*
+WOO CUSTOM STYLESHEET
+---------------------
+
+Instructions:
+
+Add your custom styles in this file instead of style.css so it
+is easier to update the theme. Simply copy an existing style
+from style.css to this file, and modify it to your liking. */
+
+
+/* GLOBAL STYLES
+----------------
+Add styles beneath this line that you want to be applied across your entire site */
+
+
+
+
+/* DESKTOP STYLES
+-----------------
+Add styles inside the media query below that you only want to be applied to the desktop layout of your site */
+@media only screen and (min-width: 768px) {}
+	/* Desktop styles go below this line */
+#navigation ul.cart {
+    display: none;}
+
+.page .title { position:relative; line-height:59px}
+
+.ginput_complex label {position: relative; margin-top:0px;}
+
+.entry p{
+    margin-top: 3px;
+}
+/* remove Wordpress/WooCommerce tage on mobile */
+div#credit.col-right{
+    display:none
+}
+
+
+/* Styles placed here will only apply to screens less than 1000 pixels wide */
+@media only screen and (max-width: 1000px)  {
+
+}
+
+
+
+
+/* Styles placed here will only apply to screens less than 480 pixels wide */
+@media only screen and (max-width: 480px) {
+    /*remove slider from mobile devices */
+#loopedSlider.business-slider{
+   display: none;
+}
+.wp-image-8099
+{
+    height: 100px;
+}
+.wp-image-7918
+{
+    height: 380px;
+}
+.wp-image-7913
+{
+    height: 200px;
+}
+.wp-image-7941
+{
+    height: 265px;
+}
+    .wp-image-7947
+{
+height: 400px;
+}
+.wp-image-7950
+{
+ height: 255px;
+}
+.wp-image-7948
+{
+ height: 400px;
+}
+
+/* reduce comment form on 480px or less to 90% of original */
+#commentform textarea {
+    width: 90% !important;}}

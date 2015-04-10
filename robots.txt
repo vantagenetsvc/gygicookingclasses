@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /courses-overview/action~posterboard/
+Disallow: /courses-overview/action~agenda/
+Disallow: /courses-overview/action~oneday/
+Disallow: /courses-overview/action~month/
+Disallow: /courses-overview/action~week/
+Disallow: /courses-overview/action~stream/

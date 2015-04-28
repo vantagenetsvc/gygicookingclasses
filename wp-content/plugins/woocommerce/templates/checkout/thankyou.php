@@ -11,9 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-if ( $order ) : ?>
 
-	<?php if ( $order->has_status( 'failed' ) ) : ?>
+
+if ( $order ) { ?>
+
+	<?php if ( $order->has_status( 'failed' ) ) { ?>
 
 		<p><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction.', 'woocommerce' ); ?></p>
 
@@ -31,7 +33,7 @@ if ( $order ) : ?>
 			<?php endif; ?>
 		</p>
 
-	<?php else : ?>
+	<?php  } else { ?>
 
 		<p><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
 
@@ -57,13 +59,27 @@ if ( $order ) : ?>
 		</ul>
 		<div class="clear"></div>
 
-	<?php endif; ?>
+	<?php } ?>
 
 	<?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
 	<?php do_action( 'woocommerce_thankyou', $order->id ); ?>
-
-<?php else : ?>
+ 
+ 
+ <?php
+	if($_GET['ip']!='1' || $_GET['ip']==''){
+	 header('location:http://gygi.com/woocommerce_test.php?oid='.$order->id.'&orderkey='.$_GET['key']) ;
+	 } else {
+		 header('location:https://www.gygicookingclasses.com/checkout/order-received/'.$order->id.'/key='.$_GET['key'].'&ip=1');
+		 }
+	 ?> 
+ 
+ 
+ 
+ 
+<?php } else {?>
 
 	<p><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), null ); ?></p>
+   
 
-<?php endif; ?>
+
+<?php } ?>
